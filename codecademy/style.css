@@ -125,12 +125,14 @@ section >.Login_Section{
     align-items: center;
     justify-content: space-evenly;
     margin: 50px;
+    flex-wrap: wrap;
 }
 label{
     color: #10162f;
     font-family: apercu;
     font-weight: 400;
-    font-size: 16px
+    font-size: 16px;
+    
     
 }
 .Form_Email_Input_Container > input,.Form_Password_Input_Container > input{
@@ -184,6 +186,21 @@ label{
     border: 1px solid #000;
     border-radius: 3px;
     margin-right: 10px;
+
+}
+input:hover{
+    border-width: 1px;
+    border-color: #3a10e5;
+    border-radius: 2px;
+    
+}
+input{
+    border-width: 1px;
+    border-color: #000;
+    border-radius: 2px;
+    outline: none;
+    padding: 5px;
+    box-sizing: border-box;
 
 }
 
