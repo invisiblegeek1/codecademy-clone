@@ -31,17 +31,16 @@ let Todo={
 
     },
     clearCompleted:function(){
-        TodoDB.map((item)=>{
-            item.completed==true?this.deleteTodo(item.id):null;
+        let completedArray=TodoDB.filter((item)=>{return item.completed==true});
+        completedArray.map((item)=>{
+            item.completed?this.deleteTodo(item.id):null;
         })
 
     },
-    viewTodos:(flag)=> {
+    viewTodos:(flag="all")=> {
         let completedArray=TodoDB.filter((item)=>{return item.completed==true});
         let activeArray=TodoDB.filter((item)=>{return item.completed==false});
         
-
-
 
         let listArray=(array)=>{
             array.map((item)=>{
@@ -51,10 +50,48 @@ let Todo={
             })
 
         };
-        flag=="active"?listArray(activeArray):null;
+        if(Todo.length==0){
+            console.log("nothing in todo")
+        }else{
+            flag=="active"?listArray(activeArray):null;
         flag=="completed"?listArray(completedArray):null;
+        flag=="all"?listArray(TodoDB):null;
+
+        }
+        
 
         
     }
 
 }
+
+Todo.addTodo("task1");
+Todo.addTodo("task2");
+Todo.addTodo("task3");
+Todo.addTodo("task4");
+Todo.addTodo("task5");
+Todo.viewTodos();
+
+
+Todo.editTodo(3,"taskthree");
+Todo.viewTodos();
+
+Todo.completeTodo(4);
+Todo.viewTodos();
+
+Todo.completeAll();
+Todo.viewTodos();
+
+Todo.deleteTodo(5);
+Todo.viewTodos();
+
+Todo.clearCompleted();
+Todo.viewTodos();
+
+// Todo.viewTodos("active");
+// Todo.viewTodos("completed");
+
+
+
+
+

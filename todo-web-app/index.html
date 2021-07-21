@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>todo app</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+</head>
+
+<body class="container">
+
+	<hr />
+	<div>introduction to web-ui</div>
+	<hr /> Time Now : <span id="time" class="badge bg-danger"></span>
+    <hr />
+    <div class="action_Container ">
+      <button id="top-5-todos" class="btn btn-primary mb-3  ">View Todos</button>
+
+     <select id="Filter-Container" class="form-select mb-3" onchange="setFilter(this.value)" aria-label="Default select example" >
+  <option selected>Select your option</option>
+  <option value="10">10</option>
+  <option value="20">20</option>
+  <option value="30">30</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+
+
+</select>
+<div class="input-group mb-3">
+  <input type="number" class="form-control" placeholder="Filter value" aria-label="Username" aria-describedby="basic-addon1" onchange="setFilter(this.value)">
+</div>
+
+
+</div>
+    <hr />
+    <div id="progress"></div>
+    <ul id="todos">
+
+    </ul>
+
+
+    <hr />
+
+    <div id="box" class="alert alert-info">
+        Welcome
+    </div>
+
+    <button id="gm">GM</button>
+    <button id="gn">GN</button>
+    <button id="ge">GE</button>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
