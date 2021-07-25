@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script defer src="main.js"></script></head>
+  <body>
+    <div class="container">
+      <hr />
+        <div>todo web ui</div>
+        <hr />
+      <div class="container alert alert-info ">
+         <div class="row">
+                <div class="offset-3 col-6">
+                    <input id="new-input" 
+                           placeholder="New Todo?" 
+                           class="form-control input-lg"
+                           oninput="setValue()"
+                            />
+                    <button id="btn-go" class="btn btn-primary" onclick="Todo.addTodo(setValue())">add</button>        
+                </div>
+            </div>
+
+      </div>
+        <div class="card card-body">
+            <table class="table">
+                <tbody id="todos-body">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><button class="btn btn-primary" onclick="Todo.viewTodos('all')">All</button></td>
+                        <td><button class="btn btn-primary" onclick="Todo.viewTodos('active')">Active</button></td>
+                        <td><button class="btn btn-primary" onclick="Todo.viewTodos('completed')">Completed</button></td>
+                        <td><button class="btn btn-primary" onclick="Todo.clearCompleted()">Clear Completed</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!-- <script src="./dist/main.js"></script> -->
+  </body>
+</html>

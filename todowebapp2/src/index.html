@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    
+    
+  </head>
+  <body>
+    <div class="container">
+      <hr />
+        <div>todo web ui</div>
+        <hr />
+      <div class="container alert alert-info ">
+         <div class="row">
+                <div class="offset-3 col-6">
+                    <input id="new-input" 
+                           placeholder="New Todo?" 
+                           class="form-control input-lg"
+                           
+                            />
+                    <button id="btn-go" class="btn btn-primary" >add</button>        
+                </div>
+            </div>
+
+      </div>
+        <div class="card card-body">
+            <table class="table">
+                <tbody id="todos-body">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><button id="btn-todo-all" class="btn btn-primary" >All</button></td>
+                        <td><button id="btn-todo-active" class="btn btn-primary" >Active</button></td>
+                        <td><button id="btn-todo-completed" class="btn btn-primary" >Completed</button></td>
+                        <td><button id="btn-todo-clearCompleted" class="btn btn-primary" >Clear Completed</button></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+    </div>
+
+
+    <!-- <script src="./dist/main.js"></script> -->
+  </body>
+</html>
