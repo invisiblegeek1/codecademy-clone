@@ -1,9 +1,9 @@
 <div class="Item_Container">
     <div class="Image_Container">
-        <img [src]="item.imageUrl" alt="" class="Item_Image">
+        <img [src]="item.image" alt="" class="Item_Image">
     </div>
-    <p>{{item.title}}</p>
-    <p class="Item_Price">{{item.price}}</p>
+    <p class="Item_Title">{{item.title}}</p>
+    <p class="Item_Price">{{item.price | currency}}</p>
     <button class="Item_Add_Cart_Button">ADD CART</button>
 </div>
 

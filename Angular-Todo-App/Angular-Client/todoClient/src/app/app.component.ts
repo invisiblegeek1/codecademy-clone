@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ItemService } from './item.service';
 
 
 @Component({
@@ -8,31 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoClient';
+  items: Array<any>=[];
+  private itemsService:ItemService;
+  constructor(itemserService: ItemService) {
+    this.itemsService = itemserService;
+  }
+  ngOnInit() {
+    this.items = this.itemsService.getItems();
+  }
 
-  items=[
-    {
-      title:"laptop",
-      price:2000,
-      imageUrl:"assets/opencart.svg",
 
-    },
-    {
-      title:"mobile",
-      price:3000,
-      imageUrl:"assets/opencart.svg",
-
-    },
-    {
-      title:"ipod",
-      price:1000,
-      imageUrl:"assets/opencart.svg",
-
-    },
-    {
-      title:"pendrive",
-      price:1000,
-      imageUrl:"assets/opencart.svg",
-
-    }
-  ]
+  
 }
