@@ -1,0 +1,33 @@
+.Item_Container{
+    display: flex;
+    flex-flow: column;
+    height: 300px;
+    width: 220px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 10px;
+    
+
+
+}
+.Item_Add_Cart_Button{
+    display: flex;
+    width: 180px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: rgb(9, 166, 243);
+    
+    color: #fff;
+    justify-content: center;
+}
+.Item_Image{
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+
+}

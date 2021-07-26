@@ -1,0 +1,31 @@
+.Navbar_Container{
+    display: inline-flex;
+    background-color: #fff;
+    height: 50px;
+    width: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    justify-content: baseline;
+    align-items: center;
+    position: fixed;
+    top: 0;
+
+
+}
+.Navbar_Logo_Container{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    
+
+}
+.Navbar_Logo_Icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+
+}
+.Navbar_Logo{
+    display: flex;
+    margin-left: 30px;
+
+}
