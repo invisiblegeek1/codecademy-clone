@@ -1,9 +1,33 @@
 <div class="Item_Container">
+    <div class="item_Icon_Container">
+        <img src="assets/star-regular.svg" alt="" class="Item_Star_Icon">
+        <img src="assets/note.svg" alt="" class="Item_Star_Icon">
+        <img src="assets/info (1).svg" alt="" class="Item_Star_Icon">
+
+
+
+    </div>
+    
+
+    
     <div class="Image_Container">
         <img [src]="item.image" alt="" class="Item_Image">
     </div>
     <p class="Item_Title">{{item.title}}</p>
     <p class="Item_Price">{{item.price | currency}}</p>
-    <button class="Item_Add_Cart_Button">ADD CART</button>
+    <ng-template #popContent>Hello, <b>{{item.title}}</b>!
+        
+        <hr>
+        <form>
+            <label for="name">name</label>
+            <input type="text" name="name" id="item_Form_Input_Name">
+        </form>
+
+    </ng-template>
+  
+    
+    <button class="Item_Add_Cart_Button" placement="right" [ngbPopover]="popContent" triggers="mouseenter:mouseleave" popoverTitle={{item.title}} >ADD CART</button>
+    
+
 </div>
 

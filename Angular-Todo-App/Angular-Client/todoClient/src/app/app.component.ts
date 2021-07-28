@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ItemService } from './item.service';
+import "bootstrap";
 
 
 @Component({
