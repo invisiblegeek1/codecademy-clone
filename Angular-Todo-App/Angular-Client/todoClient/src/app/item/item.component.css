@@ -1,8 +1,8 @@
 .Item_Container{
     display: flex;
     flex-flow: column;
-    height: 300px;
-    width: 220px;
+    height: 320px;
+    width: 230px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     justify-content: center;
     align-items: center;
@@ -52,4 +52,7 @@
 .Item_Star_Icon{
     height: 20px;
     width: 20px;
+}
+.Item_Star_Icon,Item_Star_Icon,Item_Star_Icon{
+    cursor: pointer;
 }

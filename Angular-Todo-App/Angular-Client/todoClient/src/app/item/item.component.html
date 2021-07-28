@@ -1,33 +1,74 @@
 <div class="Item_Container">
-    <div class="item_Icon_Container">
-        <img src="assets/star-regular.svg" alt="" class="Item_Star_Icon">
-        <img src="assets/note.svg" alt="" class="Item_Star_Icon">
-        <img src="assets/info (1).svg" alt="" class="Item_Star_Icon">
-
-
-
-    </div>
     
 
-    
+
+
     <div class="Image_Container">
-        <img [src]="item.image" alt="" class="Item_Image">
+        <img [src]="item.image" alt="" class="Item_Image" [animation]="true" placement="bottom-left" ngbPopover={{item.description}} triggers="mouseenter:mouseleave"
+        popoverTitle={{item.title}}>
     </div>
     <p class="Item_Title">{{item.title}}</p>
-    <p class="Item_Price">{{item.price | currency}}</p>
-    <ng-template #popContent>Hello, <b>{{item.title}}</b>!
+    
+    
+    <div class="item_Icon_Container">
         
+        
+        <img src="assets/note.svg" alt="" class="Item_Star_Icon" (click)="open(popContent)"> |
+        <img src="assets/info (1).svg" alt="" class="Item_Star_Icon" popoverTitle={{item.title}}
+        [autoClose]="'outside'" ngbPopover={{item.description}}>
+        
+    </div>
+    
+    <p class="Item_Price">{{item.price | currency}}</p>
+    <ng-template #popContent let-modal>
+        <div class="modal-header">
+            <b>{{item.title}}</b>
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+
         <hr>
-        <form>
-            <label for="name">name</label>
-            <input type="text" name="name" id="item_Form_Input_Name">
-        </form>
+                
+        </div>
+        <div class="modal-body">
+            <form>
+            
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your details with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1">share your rating</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="userComment">Comment</label>
+                    <textarea class="form-control" aria-label="comment"></textarea>
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    
+                </div>
+    
+    
+            </form>
+            
+        </div>
+       
 
     </ng-template>
-  
     
-    <button class="Item_Add_Cart_Button" placement="right" [ngbPopover]="popContent" triggers="mouseenter:mouseleave" popoverTitle={{item.title}} >ADD CART</button>
-    
+
+
+    <button class="Item_Add_Cart_Button" >ADD CART</button>
+
 
 </div>
-
